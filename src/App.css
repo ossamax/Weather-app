@@ -1,38 +1,158 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app {
+  background-color: rgba(193, 212, 252, 0.562);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Recursive", sans-serif;
+}
+
+.app .container {
+  width: 350px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px rgba(65, 123, 170, 0.39);
+          box-shadow: 0px 5px 10px rgba(65, 123, 170, 0.39);
+  border-radius: 20px;
+  padding: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.app .container .search-box {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app .container .search-box label {
+  font-weight: 700;
+  color: #020202;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app .container .search-box input {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  outline: none;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .app .container .search-box input {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app .container .search-box input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.app .container .search-box input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.app .container .search-box input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.app .container .search-box input::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.app .container .results-weather {
+  height: 100%;
+  padding: 2rem 0 0;
+}
+
+.app .container .results-weather .left-side {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .app .container .results-weather .left-side {
+    height: 100%;
+  }
+}
+
+.app .container .results-weather .left-side .date {
+  text-align: center;
+  color: #929292;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.app .container .results-weather .left-side .current-weather .weather-icons {
+  color: black;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app .container .results-weather .left-side .current-weather .weather-icons div sup {
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.app .container .results-weather .left-side .current-weather .weather {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3e8dd5;
+}
+
+.app .container .results-weather .left-side .current-weather .more-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.app .container .results-weather .left-side .current-weather .more-info h3 {
+  color: #adadad;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .app .container .results-weather .right-side {
+    width: 100%;
   }
 }
+/*# sourceMappingURL=App.css.map */
