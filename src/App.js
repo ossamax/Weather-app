@@ -44,7 +44,7 @@ const App = () => {
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
-    return `${hours}:${min}${pmam},  ${day},  ${date}, ${month}, ${year}`;
+    return `${hours}:${min}${pmam}/${day},  ${date}, ${month}, ${year}`;
   };
 
   const Search = (evt) => {
@@ -54,6 +54,9 @@ const App = () => {
         .then((result) => {
           setWeather(result);
           console.log(result);
+        })
+        .catch((err) => {
+          console.log(err);
         });
     }
   };
@@ -66,7 +69,7 @@ const App = () => {
           <br />
           <input
             type="text"
-            placeholder="Search for city..."
+            placeholder="Enter a City Name..."
             name="country"
             className="search-bar"
             value={query}
@@ -102,7 +105,9 @@ const App = () => {
                       <sup>°C</sup>
                     </div>
                   </div>
-                  <div className="weather">{weather.weather[0].main}</div>
+                  <div className="weather">
+                    {weather.weather[0].description}
+                  </div>
                   <div className="more-info">
                     <div className="humidity">
                       <h3>Humidity</h3>
